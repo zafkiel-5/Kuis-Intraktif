@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kuis Interaktif – Dasar Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="kartu">
+
+    <!-- Layar 1: Mulai -->
+    <section id="layar-mulai" class="layar aktif">
+      <h1>Kuis Dasar Web</h1>
+      <p class="sub">10 soal tentang HTML, CSS, dan JavaScript. Setiap soal punya waktu 15 detik.</p>
+      <ul class="aturan">
+        <li>Soal dan pilihan jawaban diacak setiap kali main</li>
+        <li>Benar +10 poin, salah atau waktu habis 0 poin</li>
+      </ul>
+      <button id="btn-mulai" class="btn utama">Mulai kuis</button>
+    </section>
+
+    <!-- Layar 2: Kuis -->
+    <section id="layar-kuis" class="layar">
+      <div class="atas">
+        <span id="nomor">Soal 1 dari 10</span>
+        <span id="skor-live" class="skor-live">Skor 0</span>
+      </div>
+
+      <div class="timer"><div id="timer-bar"></div></div>
+      <p id="timer-teks" class="timer-teks">15 detik</p>
+
+      <h2 id="pertanyaan"></h2>
+      <div id="pilihan" class="pilihan"></div>
+
+      <p id="umpan-balik" class="umpan-balik" aria-live="polite"></p>
+      <button id="btn-lanjut" class="btn utama" hidden>Soal berikutnya</button>
+    </section>
+
+    <!-- Layar 3: Hasil -->
+    <section id="layar-hasil" class="layar">
+      <p class="sub">Hasil akhir</p>
+      <div class="lingkaran"><span id="skor-akhir">0</span><small>dari 100</small></div>
+      <h2 id="judul-hasil"></h2>
+      <p id="pesan-hasil" class="sub"></p>
+
+      <div class="statistik">
+        <div><strong id="stat-benar">0</strong><span>Benar</span></div>
+        <div><strong id="stat-salah">0</strong><span>Salah</span></div>
+        <div><strong id="stat-habis">0</strong><span>Waktu habis</span></div>
+      </div>
+
+      <button id="btn-ulang" class="btn utama">Ulangi kuis</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
